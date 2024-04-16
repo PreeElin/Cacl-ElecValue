@@ -1,0 +1,213 @@
+/* body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ecf0f3;
+}
+
+
+.calculator-container {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.input-group label {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 13px;
+}
+.input-group input, .input-group select {
+  flex: 2;
+  padding: 10px;
+  border: 2px solid #dfe6e9;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+.input-group input:focus, .input-group select:focus {
+  outline: none;
+  border-color: #a29bfe;
+}
+.input-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M2048 640l-1024 1024L0 640h2048z" fill="%23333"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+button:hover {
+  background-color: #5a51d6;
+  transform: translateY(-2px);
+}
+@media (max-width: 720px) {
+  .calculator-container {
+    padding: 0 15px;
+  }
+  .calculator {
+    padding: 20px;
+  }
+} */
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ecf0f3;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.calculator-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.input-group header.units {
+  min-width: 300px; /* Increased width for the header selector */
+  margin-bottom: 20px; /* Moved to a new line */
+}
+.input-group label {
+  min-width: 150px;
+  color: #333;
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 10px;
+}
+.input-group input,
+.input-group select {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #dfe6e9;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: border-color 0.3s;
+}
+.input-group input:focus, 
+.input-group select:focus {
+  outline: none;
+  border-color: #a29bfe;
+}
+.input-group input[readonly] {
+  background-color: #dfe6e9;
+  color: #636e72;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+  margin: 10px;
+}
+button:hover {
+  background-color: #5a51d6;
+  transform: translateY(-2px);
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media (max-width: 800px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-group header.units {
+    min-width: calc(100% - 20px);
+    margin-bottom: 0;
+  }
+  .input-group label {
+    margin-bottom: 5px;
+    min-width: 0;
+    text-align: left;
+  }
+  .input-group input, 
+  .input-group select {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+    flex: none;
+  }
+}

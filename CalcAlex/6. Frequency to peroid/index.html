@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequency and Period Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+  <div class="calculator">
+    <div class="input-group">
+      <label for="frequency">Frequency:</label>
+      <input type="text" id="frequency" placeholder="Enter frequency">
+      <select id="frequencyUnit">
+        <option value="Hz">Hertz (Hz)</option>
+        <option value="kHz">KiloHertz (kHz)</option>
+        <option value="MHz">MegaHertz (MHz)</option>
+		<option value="GHz">GigaHertz (GHz)</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="period">Period:</label>
+      <input type="text" id="period" placeholder="Enter period">
+      <select id="periodUnit">
+        <option value="s">Seconds (s)</option>
+        <option value="ms">Milliseconds (ms)</option>
+        <option value="us">Microseconds (µs)</option>
+        <option value="ns">Nanoseconds (ns)</option>
+      </select>
+    </div>
+    <div class="button-container">
+      <button onclick="calculate()">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

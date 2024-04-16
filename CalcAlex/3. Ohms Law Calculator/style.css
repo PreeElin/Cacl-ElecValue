@@ -1,0 +1,103 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ecf0f3;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+.calculator-container {
+  width: 100%;
+  max-width: 720px; /* Adjusted to 720px as per the latest instruction */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.input-group label {
+  flex: 0 0 150px; /* Label width fixed to 150px */
+  color: #333;
+  font-weight: bold;
+  font-size: 13px;
+}
+.input-group input,
+.input-group select {
+  padding: 8px 10px;
+  border: 2px solid #dfe6e9;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.input-group input {
+  flex: 7; /* Maintains 70% width relative to the selection box */
+}
+.input-group select {
+  flex: 3; /* Maintains 30% width relative to the input box */
+}
+.input-group input:focus, 
+.input-group select:focus {
+  outline: none;
+  border-color: #a29bfe;
+}
+.input-group input[readonly] {
+  background-color: #dfe6e9;
+  color: #636e72;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+button:hover {
+  background-color: #5a51d6;
+  transform: translateY(-2px);
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+@media (max-width: 800px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-group label {
+    margin-bottom: 5px;
+  }
+  .input-group input, 
+  .input-group select {
+    width: 100%; /* Ensures full width on smaller screens */
+    margin-left: 0;
+    margin-top: 5px; /* Adjusted for consistency */
+    flex: none; /* Disables flex sizing for full width */
+  }
+}

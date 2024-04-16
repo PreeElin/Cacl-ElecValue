@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADC Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+  <div class="calculator">
+    <div class="input-group">
+      <label for="bits">Number of Bits in ADC:</label>
+      <input type="number" id="bits" placeholder="Enter number of bits" required>
+      <div class="error-message" id="bitsError"></div>
+    </div>
+    <div class="input-group">
+      <label for="refVoltage">Reference Voltage to ADC:</label>
+      <input type="number" id="refVoltage" placeholder="Enter reference voltage" step="0.01" min="0" required>
+      <div class="error-message" id="refVoltageError"></div>
+    </div>
+    <div class="input-group">
+      <label for="analogInput">Analog Voltage Input:</label>
+      <input type="number" id="analogInput" placeholder="Enter analog voltage" step="0.01" min="0" required>
+      <div class="error-message" id="analogInputError"></div>
+    </div>
+    <div class="input-group">
+      <label for="numericOutput">Numeric Digital Output:</label>
+      <input type="text" id="numericOutput" readonly>
+    </div>
+    <div class="input-group">
+      <label for="binaryOutput">Binary Digital Output:</label>
+      <input type="text" id="binaryOutput" readonly>
+    </div>
+    <div class="button-container">
+      <button onclick="calculateADC()">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

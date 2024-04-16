@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm's Law Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+    <div class="calculator">
+        <div class="input-group">
+            <label for="voltage">Voltage:</label>
+            <input type="number" id="voltage" placeholder="Enter voltage" step="0.01" min="0">
+            <select id="voltageUnit">
+                <option value="V">Volt (V)</option>
+                <option value="mV">Millivolt (mV)</option>
+            </select>
+            <div class="error-message" id="voltageError"></div>
+        </div>
+        <div class="input-group">
+            <label for="current">Current:</label>
+            <input type="number" id="current" placeholder="Enter current" step="0.01" min="0">
+            <select id="currentUnit">
+                <option value="A">Ampere (A)</option>
+                <option value="mA">Milliampere (mA)</option>
+            </select>
+            <div class="error-message" id="currentError"></div>
+        </div>
+        <div class="input-group">
+            <label for="resistance">Resistance:</label>
+            <input type="number" id="resistance" placeholder="Enter resistance" step="0.01" min="0">
+            <select id="resistanceUnit">
+                <option value="Ω">Ohm (Ω)</option>
+                <option value="kΩ">Kiloohm (kΩ)</option>
+                <option value="MΩ">Megaohm (MΩ)</option>
+            </select>
+            <div class="error-message" id="resistanceError"></div>
+        </div>
+        <button onclick="calculateOhmsLaw()">Calculate</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

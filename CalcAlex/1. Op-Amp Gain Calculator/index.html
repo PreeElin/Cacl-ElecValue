@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Op-Amp Gain Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="op-amp-gain-style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+  <div class="calculator">
+    <div class="input-group">
+      <label for="feedbackResistor">Feedback Resistor (Rf):</label>
+      <input type="number" id="feedbackResistor" placeholder="Enter feedback resistor value" min="1" required>
+      <select id="feedbackResistorUnit">
+        <option value="ohm">Ohm</option>
+        <option value="kiloohm">Kiloohm</option>
+        <option value="megaohm">Megaohm</option>
+      </select>
+      <div class="error-message" id="feedbackResistorError"></div>
+    </div>
+    <div class="input-group">
+      <label for="inputResistor">Input Resistor (Rin):</label>
+      <input type="number" id="inputResistor" placeholder="Enter input resistor value" min="1" required>
+      <select id="inputResistorUnit">
+        <option value="ohm">Ohm</option>
+        <option value="kiloohm">Kiloohm</option>
+        <option value="megaohm">Megaohm</option>
+      </select>
+      <div class="error-message" id="inputResistorError"></div>
+    </div>
+    <div class="input-group">
+      <label for="config">Configuration:</label>
+      <select id="config">
+        <option value="non-inverting">Non-Inverting</option>
+        <option value="inverting">Inverting</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="opAmpGain">Op-Amp Gain:</label>
+      <input type="text" id="opAmpGain" readonly>
+    </div>
+    <div class="button-container">
+      <button onclick="calculateOpAmpGain()">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<script src="op-amp-gain-script.js"></script>
+</body>
+</html>
